@@ -13,13 +13,22 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fullpage/react-fullpage": "^0.1.48",
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
+    "@mui/material-nextjs": "^7.1.0",
     "next": "^15.3.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.17",
     "@types/react": "^19.1.4",
+    "autoprefixer": "^10.4.21",
     "eslint-config-prettier": "^10.1.5",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
