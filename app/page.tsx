@@ -1,9 +1,14 @@
 'use client';
 
-import FreeMap from '@/components/FreeMap';
+
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import dynamic from 'next/dynamic';
+
+const FreeMap = dynamic(() => import('@/components/FreeMap'), {
+  ssr: false,
+});
 
 export default function HomePage() {
   return (

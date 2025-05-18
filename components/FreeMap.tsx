@@ -35,7 +35,7 @@ export default function FreeMap() {
     >
       <MapContainer center={position} zoom={10} style={{ height: '200px', width: '200px' }}>
         <TileLayer
-          attribution='&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution={`© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors`}
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={position}>
