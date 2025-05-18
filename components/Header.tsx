@@ -6,61 +6,69 @@ import { useRouter } from 'next/navigation';
 
 const headerStyles = {
   appBar: {
-    width: 100, // 側邊欄寬度
-    minHeight: '100vh',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingTop: 4,
-    paddingBottom: 4,
-    background: '#201F27',
+    background: 'linear-gradient(180deg, rgba(32,31,39,0.6), rgba(26,25,34,0.6))',
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)',
+    border: '1px solid rgba(255, 255, 255, 0.1)',
+    borderRadius: 6,
+    px: 1,
+    py: 1,
+    top: '12px',
+    mt: 2,
+    width: '88%',
+    justifyContent: 'center',
+    mx: 'auto',
   },
   toolbar: {
-    flexDirection: 'column',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    gap: 2,
-    padding: 0,
-    minHeight: 'unset', // 移除預設高度
+  },
+  logo: {
+    height: 50,
+    objectFit: 'contain',
+    width: '200px',
+  },
+  button: {
+    fontSize: 18,
+    letterSpacing: '0.3em',
+    py: 1,
+    px: 2,
+    lineHeight: 1.2,
+    display: 'flex',
+    alignItems: 'center',
+    gap: 1,
+    color: 'white',
+    borderColor: 'white',
+    borderRadius: 3,
+    backgroundColor: 'rgba(122, 122, 122, 0.08)',
+    backdropFilter: 'blur(5px)',
+    '&:hover': {
+      backgroundColor: 'rgba(197, 197, 197, 0.15)',
+    },
   },
 };
 
 function Header() {
   const router = useRouter();
+
   const goToContact = () => {
     router.push('/contact');
   };
+
   return (
-    <AppBar position="sticky" sx={headerStyles.appBar}>
+    <AppBar position="sticky" sx={headerStyles.appBar} elevation={0}>
       <Toolbar sx={headerStyles.toolbar}>
         <CardMedia
           component="img"
-          src="/assets/logo-white-verticle.png"
+          src="/assets/logo-ho-white.png"
           alt="公司 Logo"
-          sx={{ objectFit: 'contain', height: 200 }}
+          sx={headerStyles.logo}
         />
-      </Toolbar>
-      <Box>
-        <Button
-          onClick={goToContact}
-          color="primary"
-          variant="outlined"
-          sx={{
-            writingMode: 'vertical-rl',
-            textOrientation: 'upright',
-            fontSize: 16,
-            fontWeight: 'light',
-            letterSpacing: '0.3em',
-            width: 40,
-            minWidth: 'unset',
-            py: 2,
-            px: 3,
-            lineHeight: 1.2,
-          }}
-        >
-          <LocalPhoneOutlinedIcon sx={{ mb: 1 }} />
+        <Button onClick={goToContact} color="inherit" variant="outlined" sx={headerStyles.button}>
+          <LocalPhoneOutlinedIcon />
           我要做網站
         </Button>
-      </Box>
+      </Toolbar>
     </AppBar>
   );
 }

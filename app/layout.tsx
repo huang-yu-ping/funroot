@@ -21,10 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ClientLayout>
           <Box
-            display="flex"
-            bgcolor="#201F27"
             width="100%"
-            sx={{ '& .fp-watermark': { display: 'none' } }}
           >
             <Header />
             <Box component="main" width="100%" letterSpacing={3}>

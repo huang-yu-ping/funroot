@@ -6,7 +6,7 @@ const theme = createTheme({
       main: '#ffffff', // 自定义主色
     },
     secondary: {
-      main: '#ff4081', // 自定义次色
+      main: '#23b9d1', // 自定义次色
     },
   },
 });
