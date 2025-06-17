@@ -1,7 +1,6 @@
 'use client';
 
 import Footer from '@/components/Footer';
-import { FreeMap2 } from '@/components/FreeMap';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -10,6 +9,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import FreeMapWrapper2 from '@/components/FreeMapWrapper2';
 
 export default function ContactPage() {
   return (
@@ -87,7 +87,7 @@ export default function ContactPage() {
             <Grid container spacing={4} alignItems="center">
               {/* 地圖 */}
               <Grid size={{ xs: 12, md: 8 }}>
-                <FreeMap2 />
+                <FreeMapWrapper2 />
               </Grid>
 
               {/* 聯絡資訊 */}
