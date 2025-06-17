@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Header from '../components/Header';
 import ClientLayout from './ClientLayout';
+import AOSProvider from '@/components/AOSProvider';
 // import { Raleway } from 'next/font/google';
 
 // const raleway = Raleway({
@@ -20,15 +21,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="zh-Hant">
       <body>
         <ClientLayout>
-          <Box
-            width="100%"
-            bgcolor="#f9f9f9"
-          >
-            <Header />
-            <Box component="main" width="100%" letterSpacing={3}>
-              {children}
+          <AOSProvider>
+            <Box width="100%" bgcolor="#f9f9f9">
+              <Header />
+              <Box component="main" width="100%" letterSpacing={3}>
+                {children}
+              </Box>
             </Box>
-          </Box>
+          </AOSProvider>
         </ClientLayout>
       </body>
     </html>

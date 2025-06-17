@@ -3,13 +3,13 @@
 import { AppBar, Toolbar, CardMedia, Button, Box } from '@mui/material';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const headerStyles = {
   appBar: {
-    background: 'linear-gradient(180deg, rgba(32,31,39,0.6), rgba(26,25,34,0.6))',
+    background: 'transparent',
     backdropFilter: 'blur(10px)',
     WebkitBackdropFilter: 'blur(10px)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
     borderRadius: 6,
     px: 1,
     py: 1,
@@ -55,8 +55,30 @@ function Header() {
     router.push('/contact');
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <AppBar position="sticky" sx={headerStyles.appBar} elevation={0}>
+    <AppBar
+      position="sticky"
+      sx={{
+        ...headerStyles.appBar,
+        background: scrolled
+          ? 'linear-gradient(180deg, rgba(32,31,39,0.6), rgba(26,25,34,0.6))'
+          : 'transparent',
+        border: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+        // transition: 'background 0.8s ease, border 0.8s ease',
+      }}
+      elevation={0}
+    >
       <Toolbar sx={headerStyles.toolbar}>
         <CardMedia
           component="img"

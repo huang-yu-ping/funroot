@@ -50,6 +50,8 @@ export default function HomePage() {
             }}
           >
             <Box
+              data-aos="fade-up"
+              data-aos-delay="0"
               sx={{
                 fontSize: {
                   xs: '2rem',
@@ -64,6 +66,8 @@ export default function HomePage() {
               YOUR VISION, OUR INNOVATION.
             </Box>
             <Box
+              data-aos="fade-up"
+              data-aos-delay="150"
               sx={{
                 fontSize: {
                   xs: '1.2rem',
@@ -77,6 +81,8 @@ export default function HomePage() {
               系統設計 × 軟硬整合，打造專屬智慧方案
             </Box>
             <Box
+              data-aos="fade-up"
+              data-aos-delay="300"
               borderLeft="5px solid #2bd3ee"
               pl={2}
               fontSize={16}
@@ -105,6 +111,8 @@ export default function HomePage() {
               position: 'relative',
               pt: 2,
             }}
+            data-aos="zoom-in"
+            data-aos-delay="500"
           >
             {/* 背後發光層 */}
             <Box
@@ -136,12 +144,14 @@ export default function HomePage() {
           </Box>
         </Container>
       </Box>
-      <Box mt={62} position="relative">
+      <Box mt={67} position="relative">
         <Container maxWidth="lg">
           {/* 第一列 */}
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} mb={2}>
             {/* 左側主背景塊 */}
             <Box
+              data-aos="fade-up"
+              data-aos-delay={0}
               sx={{
                 background: '#29293b',
                 width: { xs: '100%', md: 500 },
@@ -164,24 +174,20 @@ export default function HomePage() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid rgba(0, 255, 255, 0.3)',
-                    boxShadow: '0 0 6px rgba(0, 255, 255, 0.2)',
+                    border: '1px solid rgba(0, 195, 255, 0.3)',
+                    boxShadow: '0 0 6px rgba(0, 174, 255, 0.2)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.05)',
-                      boxShadow: '0 0 12px rgba(0, 255, 255, 0.4)',
+                      boxShadow: '0 0 12px rgba(0, 140, 255, 0.4)',
                     },
                   }}
                 >
-                  <FaIdeal fontSize={32} color="#00f0ff" />
+                  <FaIdeal fontSize={32} color="#32b4ff" />
                 </Box>
 
                 <Typography variant="h4" fontWeight={700}>
-                  讓
-                  <Box component="span" ml={0.5}>
-                    創意
-                  </Box>
-                  實現
+                  讓創意實現
                 </Typography>
               </Box>
 
@@ -196,6 +202,8 @@ export default function HomePage() {
 
             {/* 右側區塊 */}
             <Box
+              data-aos="fade-left"
+              data-aos-delay={200}
               flex={1}
               sx={{
                 position: { xs: 'static', md: 'relative' },
@@ -269,17 +277,19 @@ export default function HomePage() {
                     mb: 3,
                   }}
                 >
-                  了解更多
+                  聯絡我們
                 </Button>
 
-                <Typography sx={{ mb: 1 }}>了解我們的服務據點</Typography>
-                <Typography>方便您快速找到所需協助</Typography>
+                <Typography sx={{ mb: 1 }}>有個好點子想實現嗎？</Typography>
+                <Typography>聯絡我們，一起開始動手做吧！</Typography>
               </Box>
             </Box>
           </Box>
 
           {/* 第二列 */}
           <Box
+            data-aos="fade-right"
+            data-aos-delay={0}
             display="flex"
             flexDirection={{ xs: 'column', md: 'row' }}
             gap={1}
@@ -389,6 +399,8 @@ export default function HomePage() {
 
             {/* 第二列右邊兩塊 */}
             <Box
+              data-aos="fade-up"
+              data-aos-delay={100}
               flex={1}
               display="flex"
               flexDirection="column"
@@ -459,17 +471,17 @@ export default function HomePage() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid rgba(0, 255, 255, 0.3)',
-                    boxShadow: '0 0 6px rgba(0, 255, 255, 0.2)',
+                    border: '1px solid rgba(0, 195, 255, 0.3)',
+                    boxShadow: '0 0 6px rgba(0, 174, 255, 0.2)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.05)',
-                      boxShadow: '0 0 12px rgba(0, 255, 255, 0.4)',
+                      boxShadow: '0 0 12px rgba(0, 140, 255, 0.4)',
                     },
                     mr: 2,
                   }}
                 >
-                  <SiBmcsoftware fontSize={28} color="#00f0ff" />
+                  <SiBmcsoftware fontSize={28} color="#32b4ff" />
                 </Box>
                 <Typography variant="h5" fontWeight={700}>
                   軟體開發服務
@@ -485,7 +497,14 @@ export default function HomePage() {
           </Box>
 
           {/* 第三列 */}
-          <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={1} mt={1}>
+          <Box
+            data-aos="fade-right"
+            data-aos-delay={0}
+            display="flex"
+            flexDirection={{ xs: 'column', md: 'row' }}
+            gap={1}
+            mt={1}
+          >
             {/* 左側主背景塊 */}
             <Box
               sx={{
@@ -502,19 +521,20 @@ export default function HomePage() {
               }}
             >
               <Typography variant="h5" fontWeight={700} gutterBottom>
-                UI/UX Craftsmanship
+                交付不是結束，而是開始
               </Typography>
               <Typography variant="subtitle2" gutterBottom>
-                Elegant Interfaces That Convert
+                不只完成專案，我們也在你身邊陪你一起成長。
               </Typography>
               <Typography variant="body2">
-                In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
-                ligula vel nunc egestas porttitor.
+                不只是做出來，更要讓它持續發揮價值。從培訓到維護，我們提供一站式支援，讓平台走得更遠、更穩。
               </Typography>
             </Box>
 
             {/* 右側自適應塊 */}
             <Box
+              data-aos="fade-left"
+              data-aos-delay={100}
               flex={1}
               sx={{
                 display: 'flex',
@@ -539,17 +559,17 @@ export default function HomePage() {
                   justifyContent: 'center',
                   alignItems: 'flex-start',
                   p: 4,
+                  color: 'white',
                 }}
               >
                 <Typography variant="h5" fontWeight={700} gutterBottom>
-                  Performance Optimized
+                  從零開始架構，實現每一個想法
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
-                  Fast, Secure, and Scalable
+                  快速、安全、可擴展
                 </Typography>
                 <Typography variant="body2">
-                  Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec,
-                  blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus.
+                  我們協助客戶從最初的想法出發，將創意轉化為具體可行的產品。從需求訪談、流程設計到技術選型與開發落實，陪伴客戶一步步構築理想中的系統架構。
                 </Typography>
               </Box>
             </Box>
