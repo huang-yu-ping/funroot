@@ -1,7 +1,7 @@
 'use client';
 
 import { AppBar, Toolbar, CardMedia, Button, Box } from '@mui/material';
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import { FaComments } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -65,13 +65,13 @@ function Header() {
   const router = useRouter();
 
   const goToContact = () => {
-    router.push('/contact');
+    router.push('/consultation');
   };
 
   const navItems = [
     { label: '關於我們', path: '/' },
     { label: '服務項目', path: '/services' },
-    { label: '免費諮詢', path: '/consultation' },
+    { label: '聯絡我們', path: '/contact' },
   ];
 
   const [scrolled, setScrolled] = useState(false);
@@ -121,8 +121,8 @@ function Header() {
           </Box>
 
           <Button onClick={goToContact} color="inherit" variant="outlined" sx={headerStyles.button}>
-            <LocalPhoneOutlinedIcon />
-            我要做網站
+            <FaComments size={24} style={{ marginRight: '4px' }} />
+            免費諮詢
           </Button>
         </Box>
       </Toolbar>

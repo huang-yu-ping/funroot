@@ -25,15 +25,52 @@ export default function HomePage() {
           position: 'absolute',
           top: 0,
           width: '100%',
-          background: 'linear-gradient(145deg, #121220, #1c1c2e)',
+          background: `
+            linear-gradient(145deg, #121220, #1c1c2e)
+          `,
           color: 'white',
           borderRadius: '0 0 800px 0',
           pt: { xs: 10, md: 14 },
           pb: { xs: 7, md: 11 },
           height: 626,
           boxShadow: '30px 0px 0 #2bd4ee67',
+          overflow: 'hidden',
         }}
       >
+        {/* 背景圖片水平翻轉層 */}
+        <Box sx={{ position: 'absolute', width: '100%', height: '100%', zIndex: 0, top: 0 }}>
+          {/* 背景圖層 */}
+          <Box
+            sx={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              backgroundImage: "url('/assets/mountain.jpg')",
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center -10px',
+              transform: 'scaleX(-1)',
+              backgroundBlendMode: 'multiply',
+              filter: 'grayscale(100%) brightness(15%)',
+              opacity: 0.8,
+              zIndex: 0,
+            }}
+          />
+
+          {/* 遮罩層：由下往上漸變透明 */}
+          <Box
+            sx={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              background: `
+              linear-gradient(to bottom, rgba(18, 18, 32, 0.8) 20%, transparent 70%),
+              linear-gradient(to top, rgba(18, 18, 32, 0.8) 20%, transparent 40%), 
+              linear-gradient(to left, rgba(18, 18, 32, 0.8) 20%, transparent 60%)`,
+              zIndex: 1,
+            }}
+          />
+        </Box>
         <Container
           maxWidth="lg"
           sx={{
@@ -42,6 +79,7 @@ export default function HomePage() {
             alignItems: 'center',
             justifyContent: 'space-between',
             gap: { xs: 4, md: 8 },
+            mt: "30px",
           }}
         >
           {/* 左側文字內容 */}
@@ -107,11 +145,11 @@ export default function HomePage() {
           {/* 右側圖片 */}
           <Box
             sx={{
-              flex: 1,
+              flex: 0.8,
               display: 'flex',
               justifyContent: 'center',
               position: 'relative',
-              pt: 2,
+              pt: 3,
             }}
             data-aos="zoom-in"
             data-aos-delay="500"
@@ -172,11 +210,9 @@ export default function HomePage() {
                   sx={{
                     width: 52,
                     height: 52,
-                    borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid white',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   }}
                 >
@@ -416,11 +452,9 @@ export default function HomePage() {
                   sx={{
                     width: 46,
                     height: 46,
-                    borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid white',
                     mr: 2,
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   }}
@@ -459,11 +493,9 @@ export default function HomePage() {
                   sx={{
                     width: 46,
                     height: 46,
-                    borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid white',
                     mr: 2,
                   }}
                 >
@@ -605,9 +637,6 @@ export default function HomePage() {
           }}
         /> */}
         <Footer />
-        <Box fontSize={12} sx={{ opacity: 0.8, zIndex: 1, textAlign: 'center' }} mt={1.6}>
-          Copyright © 2025 楓曜科技股份有限公司 - FUNRoot Technology Co. 版權所有.
-        </Box>
       </Box>
     </>
   );

@@ -76,13 +76,13 @@ export default function ConsultationPage() {
         </Box>
       </Box>
 
-      <Box mt={30} position="relative" height={3100}>
+      <Box mt={30} position="relative" height={3400}>
         <Container maxWidth="lg">
           <Box
             component="iframe"
             src="https://docs.google.com/forms/d/e/1FAIpQLSfnNqtiIeDAkHTbznya63aiOq6Pbin3T1HeTVCwhJpBqNegBg/viewform?embedded=true"
             width="100%"
-            height="3100px"
+            height="3400px"
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
@@ -109,9 +109,6 @@ export default function ConsultationPage() {
         }}
       >
         <Footer />
-        <Box fontSize={12} sx={{ opacity: 0.8, zIndex: 1, textAlign: 'center' }} mt={1.6}>
-          Copyright © 2025 楓曜科技股份有限公司 - FUNRoot Technology Co. 版權所有.
-        </Box>
       </Box>
     </Box>
   );

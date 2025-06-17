@@ -11,27 +11,27 @@ import {
 
 const steps = [
   {
-    icon: <FaComments size={28} />,
+    icon: <FaComments size={28} color='#263e86' />,
     title: '需求溝通',
     desc: '了解您的需求，攜手打造專屬的數位解決方案',
   },
   {
-    icon: <FaFileInvoiceDollar size={28} />,
+    icon: <FaFileInvoiceDollar size={28} color='#263e86' />,
     title: '專業報價',
     desc: '依據需求討論結果，呈現完整報價與合作計畫',
   },
   {
-    icon: <FaPencilRuler size={28} />,
+    icon: <FaPencilRuler size={28} color='#263e86' />,
     title: '專案規劃',
     desc: '依據討論內容，量身訂製專屬的專業解決方案',
   },
   {
-    icon: <FaLaptopCode size={28} />,
+    icon: <FaLaptopCode size={28} color='#263e86' />,
     title: '開發執行',
     desc: '專業團隊將方案落實成具體產品，保障品質與效能',
   },
   {
-    icon: <FaRocket size={28} />,
+    icon: <FaRocket size={28} color='#263e86' />,
     title: '產品上線',
     desc: '品質驗收後，協助產品上線，並持續提供後續支援',
   },
@@ -115,7 +115,7 @@ export default function FlowSteps() {
                     width: 64,
                     height: 64,
                     borderRadius: '50%',
-                    border: '2px solid #2a2a40',
+                    // border: '2px solid #2a2a40',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -130,13 +130,13 @@ export default function FlowSteps() {
                     sx={{
                       position: 'absolute',
                       top: -16,
-                      right: -16,
+                      right: -46,
                       fontWeight: 'bold',
-                      fontSize: 28,
-                      color: '#263e865c',
+                      fontSize: 16,
+                      color: '#2223275c',
                     }}
                   >
-                    {index + 1}
+                    STEP {index + 1}.
                   </Typography>
                   {step.icon}
                 </Box>
@@ -151,7 +151,7 @@ export default function FlowSteps() {
                     transition: 'background-color 0.3s ease',
                   }}
                 >
-                  <Typography variant="h6" fontWeight="bold" color="#263e86">
+                  <Typography variant="h6" fontWeight="bold" color="#29293b">
                     {step.title}
                   </Typography>
                   <Typography variant="subtitle1" color="text.secondary" mt={2}>
