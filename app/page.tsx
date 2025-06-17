@@ -120,7 +120,7 @@ export default function HomePage() {
                 mb: 3,
               }}
             >
-              系統設計 × 軟硬整合，打造專屬智慧方案
+              系統設計 × 智慧應用開發，實現創新解決方案
             </Box>
             <Box
               data-aos="fade-up"
@@ -140,7 +140,7 @@ export default function HomePage() {
                 WebkitBoxOrient: 'vertical',
               }}
             >
-              楓曜是一家設計與開發並重的網站公司，融合技術實力與實務經驗，打造兼具美感與效能的網頁系統，並提供軟硬體整合服務，協助企業推動品牌行銷與數位轉型
+              楓曜是一家設計與開發並重的網站公司，專注於融合設計思維與技術實力，打造高品質網站系統，並透過整合策略與技術應用，助力企業品牌行銷與數位轉型布局
             </Box>
           </Box>
 

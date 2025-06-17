@@ -68,7 +68,7 @@ export default function ContactPage() {
             }}
           >
             <Typography variant="h4" fontWeight="bold" gutterBottom data-aos="fade-right">
-              滿足您的商業挑戰
+              準備好開始了嗎？
             </Typography>
             <Typography
               variant="subtitle1"
@@ -76,7 +76,7 @@ export default function ContactPage() {
               data-aos="fade-left"
               data-aos-delay="200"
             >
-              「從深入溝通到精準執行，我們與您同行」
+              「歡迎與我們聯繫，一起實現下一個目標」
             </Typography>
           </Box>
         </Box>
