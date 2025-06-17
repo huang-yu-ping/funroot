@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AOSProvider>
             <Box width="100%" bgcolor="#f9f9f9">
               <Header />
-              <Box component="main" width="100%" letterSpacing={3}>
+              <Box component="main" width="100%" letterSpacing={3} sx={{ overflowX: 'hidden' }}>
                 {children}
               </Box>
             </Box>

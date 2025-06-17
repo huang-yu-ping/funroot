@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { FaIdeal } from 'react-icons/fa6';
 // import FreeMap from '@/components/FreeMap';
-import { Button } from '@mui/material';
+import { Button, useMediaQuery, useTheme } from '@mui/material';
 import { SiBmcsoftware } from 'react-icons/si';
 import { MdDesignServices } from 'react-icons/md';
 import FreeMapWrapper from '@/components/FreeMapWrapper';
@@ -18,6 +18,8 @@ import Cooperation from '@/components/Cooperation';
 // });
 
 export default function HomePage() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <>
       <Box
@@ -79,7 +81,7 @@ export default function HomePage() {
             alignItems: 'center',
             justifyContent: 'space-between',
             gap: { xs: 4, md: 8 },
-            mt: "30px",
+            mt: '30px',
           }}
         >
           {/* 左側文字內容 */}
@@ -174,6 +176,7 @@ export default function HomePage() {
               src="/assets/header-bg2.png"
               alt="header-bg"
               sx={{
+                display: isMobile ? 'none' : 'block',
                 width: { xs: '100%', sm: '80%', md: '100%' },
                 maxWidth: 600,
                 height: 'auto',
