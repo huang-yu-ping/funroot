@@ -120,7 +120,7 @@ export default function HomePage() {
                 mb: 3,
               }}
             >
-              系統設計 × 智慧應用開發，實現創新解決方案
+              系統設計 × 智慧應用開發
             </Box>
             <Box
               data-aos="fade-up"
