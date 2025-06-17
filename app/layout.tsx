@@ -12,7 +12,7 @@ import AOSProvider from '@/components/AOSProvider';
 // });
 
 export const metadata = {
-  title: '品牌形象網站',
+  title: '楓曜科技股份有限公司',
   description: '展示你的品牌價值與服務。',
 };
 

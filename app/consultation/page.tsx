@@ -61,10 +61,15 @@ export default function ConsultationPage() {
               flexDirection: { xs: 'column', md: 'row' },
             }}
           >
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
+            <Typography variant="h4" fontWeight="bold" gutterBottom data-aos="fade-right">
               從對話開始
             </Typography>
-            <Typography variant="subtitle1" fontStyle="italic">
+            <Typography
+              variant="subtitle1"
+              fontStyle="italic"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               「與我們聯繫，打造你的專屬方案」
             </Typography>
           </Box>
