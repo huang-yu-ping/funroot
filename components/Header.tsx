@@ -28,6 +28,19 @@ const headerStyles = {
     objectFit: 'contain',
     width: '200px',
   },
+  navBox: {
+    display: 'flex',
+    gap: 4,
+    alignItems: 'center',
+  },
+  navButton: {
+    fontSize: 16,
+    color: 'white',
+    textTransform: 'none',
+    '&:hover': {
+      backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    },
+  },
   button: {
     fontSize: 18,
     letterSpacing: '0.3em',
@@ -55,6 +68,12 @@ function Header() {
     router.push('/contact');
   };
 
+  const navItems = [
+    { label: '關於我們', path: '/' },
+    { label: '服務項目', path: '/services' },
+    { label: '免費諮詢', path: '/consultation' },
+  ];
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -75,7 +94,7 @@ function Header() {
           ? 'linear-gradient(180deg, rgba(32,31,39,0.6), rgba(26,25,34,0.6))'
           : 'transparent',
         border: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
-        // transition: 'background 0.8s ease, border 0.8s ease',
+        transition: 'background 0.8s ease, border 0.8s ease',
       }}
       elevation={0}
     >
@@ -86,10 +105,26 @@ function Header() {
           alt="公司 Logo"
           sx={headerStyles.logo}
         />
-        <Button onClick={goToContact} color="inherit" variant="outlined" sx={headerStyles.button}>
-          <LocalPhoneOutlinedIcon />
-          我要做網站
-        </Button>
+
+        <Box display="flex" alignContent="center" gap={4}>
+          <Box sx={headerStyles.navBox}>
+            {navItems.map(({ label, path }) => (
+              <Button
+                key={label}
+                color="inherit"
+                sx={headerStyles.navButton}
+                onClick={() => router.push(path)}
+              >
+                {label}
+              </Button>
+            ))}
+          </Box>
+
+          <Button onClick={goToContact} color="inherit" variant="outlined" sx={headerStyles.button}>
+            <LocalPhoneOutlinedIcon />
+            我要做網站
+          </Button>
+        </Box>
       </Toolbar>
     </AppBar>
   );

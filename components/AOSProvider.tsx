@@ -11,7 +11,7 @@ export default function AOSProvider({ children }: { children: React.ReactNode })
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
     });
 
     // 先初始化動畫，再等待結束過場

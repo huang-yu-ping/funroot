@@ -10,6 +10,8 @@ import { SiBmcsoftware } from 'react-icons/si';
 import { MdDesignServices } from 'react-icons/md';
 import FreeMapWrapper from '@/components/FreeMapWrapper';
 import Footer from '@/components/Footer';
+import SimpleSlider from '@/components/Slider';
+import Cooperation from '@/components/Cooperation';
 
 // const FreeMap = dynamic(() => import('@/components/FreeMap'), {
 //   ssr: false,
@@ -170,20 +172,15 @@ export default function HomePage() {
                   sx={{
                     width: 52,
                     height: 52,
-                    borderRadius: '12px',
+                    borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid rgba(0, 195, 255, 0.3)',
-                    boxShadow: '0 0 6px rgba(0, 174, 255, 0.2)',
+                    border: '1px solid white',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 0 12px rgba(0, 140, 255, 0.4)',
-                    },
                   }}
                 >
-                  <FaIdeal fontSize={32} color="#32b4ff" />
+                  <FaIdeal fontSize={32} />
                 </Box>
 
                 <Typography variant="h4" fontWeight={700}>
@@ -419,18 +416,13 @@ export default function HomePage() {
                   sx={{
                     width: 46,
                     height: 46,
-                    borderRadius: '12px',
+                    borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid rgba(190, 120, 255, 0.418)', // 微霓虹藍邊框
-                    boxShadow: '0 0 10px rgba(212, 120, 255, 0.1)', // 柔和科技感光暈
+                    border: '1px solid white',
                     mr: 2,
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 0 16px rgba(212, 120, 255, 0.25)',
-                    },
                   }}
                 >
                   <MdDesignServices fontSize={28} color="#ffffff" />
@@ -467,21 +459,15 @@ export default function HomePage() {
                   sx={{
                     width: 46,
                     height: 46,
-                    borderRadius: '12px',
+                    borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid rgba(0, 195, 255, 0.3)',
-                    boxShadow: '0 0 6px rgba(0, 174, 255, 0.2)',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 0 12px rgba(0, 140, 255, 0.4)',
-                    },
+                    border: '1px solid white',
                     mr: 2,
                   }}
                 >
-                  <SiBmcsoftware fontSize={28} color="#32b4ff" />
+                  <SiBmcsoftware fontSize={28} />
                 </Box>
                 <Typography variant="h5" fontWeight={700}>
                   軟體開發服務
@@ -577,17 +563,15 @@ export default function HomePage() {
         </Container>
       </Box>
       <Box>
-        <Container maxWidth="lg">
-          <Box p={10}>
-            Why do we use it? It is a long established fact that a reader will be distracted by the
-            readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-            here, content here', making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default model text, and a
-            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
-            versions have evolved over the years, sometimes by accident, sometimes on purpose
-            (injected humour and the like).
-          </Box>
+        <Container
+          maxWidth={false}
+          disableGutters
+          // sx={{ background: 'linear-gradient(145deg, #f9f9f9 0%, #f0f4f8 50%, #dfe6ed 100%)' }}
+        >
+          <Cooperation />
+        </Container>
+        <Container maxWidth={false} disableGutters>
+          <SimpleSlider />
         </Container>
       </Box>
       <Box

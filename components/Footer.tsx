@@ -54,7 +54,7 @@ function Footer() {
             <br />
             <span style={{ visibility: 'hidden' }}>Email</span>｜jaitech.jaychen@gmail.com
             <br />
-            Address｜桃園市桃園區永安路300號4樓
+            Address｜33742桃園市大園區135號
           </Typography>
         </Grid>
 
