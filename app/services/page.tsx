@@ -252,9 +252,6 @@ export default function Services() {
         }}
       >
         <Footer />
-        <Box fontSize={12} sx={{ opacity: 0.8, zIndex: 1, textAlign: 'center' }} mt={1.6}>
-          Copyright © 2025 楓曜科技股份有限公司 - FUNRoot Technology Co. 版權所有.
-        </Box>
       </Box>
     </Box>
   );
