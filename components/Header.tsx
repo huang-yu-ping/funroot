@@ -21,17 +21,16 @@ import { useEffect, useState } from 'react';
 
 const headerStyles = {
   appBar: {
+    display: 'block',
     background: 'transparent',
     backdropFilter: 'blur(10px)',
     WebkitBackdropFilter: 'blur(10px)',
     borderRadius: 6,
     px: 1,
     py: 1,
-    top: '12px',
     mt: 2,
     width: '88%',
     justifyContent: 'center',
-    mx: 'auto',
   },
   toolbar: {
     justifyContent: 'space-between',
@@ -109,9 +108,14 @@ function Header() {
   }, []);
 
   return (
-    <>
+    <Box
+      width="100%"
+      position="fixed"
+      display="flex"
+      justifyContent="center"
+      sx={{ zIndex: 10000 }}
+    >
       <AppBar
-        position="sticky"
         sx={{
           ...headerStyles.appBar,
           background: scrolled
@@ -119,6 +123,7 @@ function Header() {
             : 'transparent',
           border: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
           transition: 'background 0.8s ease, border 0.8s ease',
+          position: 'initial',
         }}
         elevation={0}
       >
@@ -150,7 +155,7 @@ function Header() {
                 onClick={toggleDrawer(true)}
                 size="large"
               >
-                <HiOutlineMenu color='white' />
+                <HiOutlineMenu color="white" />
               </IconButton>
             </Box>
           ) : (
@@ -206,7 +211,7 @@ function Header() {
           </List>
         </Box>
       </Drawer>
-    </>
+    </Box>
   );
 }
 

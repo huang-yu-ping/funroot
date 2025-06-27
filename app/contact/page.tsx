@@ -81,7 +81,7 @@ export default function ContactPage() {
           </Box>
         </Box>
       </Box>
-      <Box mt={25.5} position="relative">
+      <Box mt={38} position="relative">
         <Box sx={{ py: 6 }}>
           <Container maxWidth="lg">
             <Grid container spacing={4} alignItems="center">
